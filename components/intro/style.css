@@ -1,0 +1,22 @@
+.picture-container{
+    @apply flex
+    items-center
+    justify-center
+}
+
+.profile-picture{
+    @apply rounded-full
+    h-32
+    w-32
+    object-cover
+    border-[0.35rem]
+    border-white
+    shadow-xl
+}
+
+.emoji-style{
+    @apply absolute
+    bottom-0
+    right-0
+    text-5xl
+}
