@@ -1,3 +1,4 @@
+import Header from '@/components/header/header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,11 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className} bg-gray-50 text-gray-950`}>
+      <body className={`${inter.className} body-style`}>
         <div className='home-bg-rigth'>
         </div>
         <div className='home-bg-left'>
         </div>
+        <Header />
         {children}
       </body>
     </html>

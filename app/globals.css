@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.body-style {
+  @apply bg-gray-50 text-gray-950 relative h-[5000px]
+}
+
 .home-bg-rigth {
   @apply bg-[#fbe2e3]
   absolute
@@ -29,5 +33,5 @@
   md:left-[-33rem]
   lg:left-[-28rem]
   xl:left-[-15rem]
-  2xl:left-[-5rem]
+  2xl:left-[-5rem];
 }
