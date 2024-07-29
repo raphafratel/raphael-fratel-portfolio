@@ -5,12 +5,13 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import img404 from '@/public/404.jpg'
 import * as motions from './motions';
-import * as style from './style'
+import * as styles from './styles'
 
 export default function Intro() {
   return (
-    <section>
-      <div className={style.profilePicContainer}>
+    <section
+    className={styles.section.trim()}>
+      <div className={styles.profilePicContainer}>
         <div className='relative'>
 
           <motion.div {...motions.picture}>
@@ -21,20 +22,21 @@ export default function Intro() {
               height={250}
               quality={95}
               priority={true}
-              className={style.profilePicture}
+              className={styles.profilePicture}
             />
           </motion.div>
 
           <motion.span
             {...motions.emoji}
-            className={style.emoji}>
+            className={styles.emoji}>
             ✌️
           </motion.span>
           
         </div>
       </div>
 
-      <p>
+      <p
+        className={styles.paragraph.trim()}>
         Oi eu sou o Raphael, sou um desenvolvedor fullstack next e node.
       </p>
     </section>
