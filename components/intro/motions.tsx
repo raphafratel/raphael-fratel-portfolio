@@ -1,4 +1,4 @@
-export const motionPicture = {
+export const picture = {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: 1, scale: 1 },
     transition: {
@@ -7,7 +7,7 @@ export const motionPicture = {
     },
   };
 
-  export const motionEmoji = {
+  export const emoji = {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: 1, scale: 1 },
     transition: {
