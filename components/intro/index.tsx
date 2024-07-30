@@ -1,21 +1,28 @@
 "use client";
 
+import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
 import img404 from '@/public/404.jpg'
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/activeSectionContext';
 import * as motions from './motions';
 import * as styles from './styles'
 
 export default function Intro() {
+  const {ref} = useSectionInView("Home", 0.5);
+  const {setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
     <section
+    ref={ref}
+    id='home'
     className={styles.section}>
       <div className={styles.profilePicContainer}>
-        <div className='relative'>
+        <div className="relative">
 
           <motion.div {...motions.picture}>
             <Image
@@ -52,6 +59,10 @@ export default function Intro() {
         <Link
           className={styles.contactButton}
           href='#contact'
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Fale comigo
           <BsArrowRight 

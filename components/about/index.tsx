@@ -12,8 +12,8 @@ export default function About() {
 
   return(
     <motion.section
-      id="about"
       ref={ref}
+      id="about"
       className={styles.section}
       {...motions.section}
       >
