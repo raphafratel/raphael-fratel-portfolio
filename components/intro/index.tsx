@@ -38,12 +38,12 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.p
+      <motion.h1
         className={styles.paragraph}
         {... motions.paragraph}
         >
         Oi eu sou o Raphael, sou um desenvolvedor fullstack next e node.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         className={styles.buttonsContainer}
