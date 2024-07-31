@@ -1,7 +1,11 @@
-import * as styles from './page.styles'
 import Intro from "@/components/intro";
 import Divider from "@/components/divider";
 import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
+import * as styles from './page.styles'
 
 export default function Home() {
   return (
@@ -9,6 +13,10 @@ export default function Home() {
       <Intro />
       <Divider />
       <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
     </main>
-  )
+  );
 }
